@@ -1,0 +1,12 @@
+Feature,Description,Suggested Library / Method
+VPN / Proxy Detection,"Detect if behind commercial VPN, Tor, data-center, or residential proxy","ipqualityscore.com, getipintel.net, scamalytics"
+Browser Leak Simulation,"Show what a browser would leak (WebRTC public IP, timezone, fonts via headers)",Fake headers + requests
+Wi-Fi BSSID & SSID Leak,Get current connected Wi-Fi name + BSSID (Windows/Linux/macOS),netifaces + subprocess (iwconfig/netsh
+Google Geolocate via Wi-Fi,Use Google’s Geolocation API with nearby BSSIDs (extremely accurate),Send 2–3 nearby access points
+MAC Vendor Lookup,"Resolve MAC OUI → manufacturer (Apple, Xiaomi, etc.)",macvendors.com API or offline database
+Traceroute + Hop Geolocation,Show country flag for each hop on path to 8.8.8.8,scapy or python-traceroute + ip-api
+Stealth Mode,Zero network requests — only local fingerprinting (useful in air-gapped labs),--offline flag
+Tor Execution,Auto-detect if running over Tor and fetch exit node location,Check 9050/9150 + stem library
+QR Code Output,Display all results as scannable QR for mobile transfer,qrcode[pil]
+One-Liner for CTFs,"python3 -c ""import requests,platform..."" (under 280 chars)",For Twitter/CTF challenges
+Self-Deletion / Anti-Forensics,Wipe script from disk after execution (educational only),os.remove(file)
